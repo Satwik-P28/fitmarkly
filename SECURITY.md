@@ -1,5 +1,7 @@
 # Security policy
 
-Please report suspected vulnerabilities privately through GitHub's security-advisory feature. Do not include real resumes, job applications, or personal data in a public issue.
+Security fixes are applied to the latest `main` build.
 
-Fitmarkly currently stores workspace data in browser local storage. Clearing this site's browser data removes that workspace unless it was exported first.
+Please do not open a public issue for a suspected vulnerability. Use GitHub’s **Report a vulnerability** private advisory flow. Include impact, affected version, and reproduction steps. Expect an acknowledgement within seven days.
+
+Never include real keys, resumes, private documents, or personal data unless strictly necessary; redact and minimize first.

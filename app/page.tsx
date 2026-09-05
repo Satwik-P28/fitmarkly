@@ -16,6 +16,7 @@ import {
   Download,
   FileCheck2,
   FileText,
+  Github,
   LockKeyhole,
   RotateCcw,
   ShieldCheck,
@@ -222,6 +223,21 @@ export default function Home() {
           <Badge variant="secondary" className="hidden sm:inline-flex">
             <ShieldCheck data-icon="inline-start" /> Local workspace
           </Badge>
+          <Button
+            variant="outline"
+            size="sm"
+            nativeButton={false}
+            render={
+              <a
+                href="https://github.com/Satwik-P28/fitmarkly"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Star Fitmarkly on GitHub"
+              />
+            }
+          >
+            <Github data-icon="inline-start" /> Star
+          </Button>
           <Button variant="outline" size="sm" onClick={resetSample}>
             <RotateCcw data-icon="inline-start" /> Reset sample
           </Button>

@@ -2,6 +2,25 @@
   "name": "fitmarkly",
   "version": "0.1.0",
   "private": true,
+  "description": "Local-first open-source resume-to-job matcher that never invents experience.",
+  "license": "MIT",
+  "homepage": "https://fitmarkly.nex3sss.chatgpt.site",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Satwik-P28/fitmarkly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Satwik-P28/fitmarkly/issues"
+  },
+  "keywords": [
+    "resume",
+    "jobscan-alternative",
+    "ats",
+    "job-search",
+    "local-first",
+    "privacy",
+    "open-source"
+  ],
   "engines": {
     "node": ">=22.13.0"
   },
