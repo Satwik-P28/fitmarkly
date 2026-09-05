@@ -12,12 +12,26 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const siteUrl = 'https://fitmarkly.nex3sss.chatgpt.site';
+
 export const metadata: Metadata = {
-  title: 'Fitmarkly — Match the role without making things up',
+  title: 'Fitmarkly — Open-source resume matcher that never invents experience',
   description:
-    'A truth-first resume matcher with evidence-linked requirements and reviewable edits.',
-  metadataBase: new URL('https://fitmarkly.nex3sss.chatgpt.site'),
+    'Free local-first resume-to-job matcher and Jobscan alternative. Evidence-linked requirements, claim locks, and reviewable wording — no account, no upload.',
+  keywords: [
+    'open source jobscan alternative',
+    'resume keyword matcher',
+    'ATS resume checker',
+    'privacy resume review',
+    'local-first job search',
+  ],
+  authors: [{ name: 'Fitmarkly contributors' }],
+  category: 'productivity',
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: siteUrl },
   openGraph: {
+    type: 'website',
+    url: siteUrl,
     title: 'Fitmarkly — Match the role without making things up',
     description:
       'Truth-first role matching with source-linked evidence and reviewable edits.',
@@ -39,6 +53,21 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Fitmarkly',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  description:
+    'Local-first open-source resume-to-job matcher with evidence-linked requirements.',
+  url: siteUrl,
+  downloadUrl: 'https://github.com/Satwik-P28/fitmarkly',
+  license: 'https://opensource.org/licenses/MIT',
+  isAccessibleForFree: true,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -49,6 +78,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
