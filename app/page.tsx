@@ -16,11 +16,11 @@ import {
   Download,
   FileCheck2,
   FileText,
-  Github,
   LockKeyhole,
   RotateCcw,
   ShieldCheck,
   Sparkles,
+  Star,
   Upload,
   X,
 } from 'lucide-react';
@@ -236,7 +236,7 @@ export default function Home() {
               />
             }
           >
-            <Github data-icon="inline-start" /> Star
+            <Star data-icon="inline-start" /> Star
           </Button>
           <Button variant="outline" size="sm" onClick={resetSample}>
             <RotateCcw data-icon="inline-start" /> Reset sample
